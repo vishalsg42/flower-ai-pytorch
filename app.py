@@ -11,9 +11,7 @@ from torchvision.transforms import Compose, ToTensor, Normalize
 from torch.utils.data import DataLoader
 from torchvision.datasets import CIFAR10
 
-logging.get.python_handler.stream = sys.stdout
-
-DEVICE = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
 class Net(nn.Module):
     def __init__(self):
